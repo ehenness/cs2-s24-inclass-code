@@ -9,5 +9,7 @@ public class AppFX extends Application {
     javafx.scene.Scene scene = new javafx.scene.Scene(label, 400, 200);
     primaryStage.setScene(scene);
     primaryStage.show();
+
+    
   }
 }

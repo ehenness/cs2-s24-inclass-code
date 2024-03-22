@@ -91,17 +91,17 @@ public class GraphicsStuff extends Application {
 
     AnimationTimer timer = new AnimationTimer() {
       public void handle(long t) {
-        g.setFill(Color.WHITE);
+        g.setFill(Color.BLACK);
         g.fillRect(0,0, canva.getWidth(),canva.getHeight());
 
-        g.setFill(Color.RED);
-        g.fillOval(xpos,ypos, 50,50);
+        g.setFill(Color.BLUEVIOLET);
+        g.fillRect(xpos,ypos, 75,75);
         xpos += xvel;
         ypos += yvel;
-        if(xpos+50 >= canva.getWidth() || xpos <= 0) {
+        if(xpos+75 >= canva.getWidth() || xpos <= 0) {
           xvel = -1 * xvel;
         }
-        if(ypos+50 >= canva.getHeight() || ypos <= 0) {
+        if(ypos+75 >= canva.getHeight() || ypos <= 0) {
           yvel = -1 * yvel;
         }
       }
@@ -113,8 +113,8 @@ public class GraphicsStuff extends Application {
 
   double xpos = 200;
   double ypos = 200;
-  double xvel = Math.random() * 10 - 5;
-  double yvel = Math.random() * 10 - 5;
+  double xvel = 3;
+  double yvel = 3;
 
   double prevX = 0;
   double prevY = 0;
@@ -127,6 +127,6 @@ public class GraphicsStuff extends Application {
       drawCircle(g, x, y-r, r/2);
       drawCircle(g, x, y+r, r/2);
     }
-  }
+  } 
 
 }
